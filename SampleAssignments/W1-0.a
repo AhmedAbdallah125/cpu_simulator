@@ -1,0 +1,18 @@
+; This program reads an integer and get 
+;the factorial of it 
+
+	read		; read n -> acc
+        store-r         ; from acc-> r0
+Start:	jmpn  Done  	; jump to Done if n <=1.
+        subtract 1      ;acc--
+        multiply        ; ro*acc->ro
+	jump  Start	; go back 
+Done:	load            ; from ro->acc
+	write 		; write the result
+	stop  		; stop
+
+
+
+
+
+
